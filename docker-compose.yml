@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  kusama:
+    build:
+      context: ./polkadot
+      args:
+        UPSTREAM_VERSION: v0.9.42
+    image: "kusama.kusama.dnp.dappnode.eth:0.1.0"
+    restart: unless-stopped
+volumes:
+  polkadot-kusama-data: {}
